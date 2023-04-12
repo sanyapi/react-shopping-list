@@ -1,0 +1,219 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins);
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
+
+* {
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+  }
+
+.app-container {
+    width: auto;
+    height: 800px;
+    margin: 50px;
+
+    /* the 3 lines below centers the .app div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* uncomment code below for testing purposes */
+    /* outline: solid 1px black; */
+  }
+
+.app {
+    position: relative;
+    width: 676px;
+    min-height: 676px;
+    height: auto;
+    border-radius: 20.85px;
+    background-color:#fb6376;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 100px;
+    /* outline: solid 1px black; */
+
+}
+
+.app-name {
+    font-weight: 100;
+    padding: 40px 50px;
+    color: #fff9ec;
+    text-align: center;
+    /* outline: solid 1px black; */
+}
+
+.add-item-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.add-item-box {
+    width: 25vw;
+    min-width: 280px;
+    height: 5vh;
+    padding: 1.5em 0em 1.5em 0em;
+    border-radius: 5.50px;
+    box-shadow: 3px 3px 4.39px rgba(0, 0, 0, 0.3);
+    background-color: #ffdccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: solid 1px black; */
+}
+
+#add-item {
+    font-size: 16px;
+    width: 100%;
+    background-color: #ffdccc;
+    border-radius: 5.50px;
+    padding: 11px 20px;
+    /* outline: solid 1px black; */
+}
+
+.add-item-box > button {
+    background-color: #ffdccc;
+    color: #5d2a42;
+    border-radius: 5.50px;
+    padding: 1em 1em;
+    cursor: pointer;
+    /* outline: solid 1px black; */
+}
+
+.item-display-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    /* outline: solid 1px black; */
+}
+
+.checkbox-container {
+    padding-top: 8px;
+    margin-right: 10px;
+    /* outline: solid 1px black; */
+}
+
+.checkbox {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    background-color: #fff9ec;
+    box-shadow: inset 0px 4.39px 4.39px rgba(0, 0, 0, 0.3);
+}
+
+.checkbox:checked {
+    background-color: #5d2a42;
+    box-shadow: inset 0px 4.39px 4.39px rgba(0, 0, 0, 0.3);
+}
+
+.item-name-container {
+    margin-right: 10px;
+    /* outline: solid 1px black; */
+}
+
+#item-name {
+    font-size: 16px;
+    background-color: #ffdccc;
+    border-radius: 5.50px;
+    padding: 11px 20px;
+    box-shadow: 3px 3px 4.39px rgba(0, 0, 0, 0.3);
+    /* outline: solid 1px black; */
+}
+
+.price-container {
+    margin-right: 10px;
+    /* outline: solid 1px black; */
+}
+
+#price {
+    font-size: 16px;
+    width: 100px;
+    margin-left: 0;
+    background-color: #ffdccc;
+    border-radius: 5.50px;
+    padding: 11px 20px;
+    box-shadow: 3px 3px 4.39px rgba(0, 0, 0, 0.3);
+    /* outline: solid 1px black; */
+}
+
+.qty-container {
+    background-color: #ffdccc;
+    margin-right: 10px;
+    border-radius: 5.50px;
+    width: 15%;
+    box-shadow: 3px 3px 4.39px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* outline: solid 1px black; */
+}
+
+.qty-container > button {
+    background-color: #ffdccc;
+    color: #5d2a42;
+    border-radius: 5.50px;
+    cursor: pointer;
+    /* outline: solid 1px black; */
+}
+
+#qty {
+    font-size: 16px;
+    width: 100%;
+    background-color: #ffdccc;
+    text-align: center;
+    /* outline: solid 1px black; */
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.total-container {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-weight: 700;
+    padding: 5%;
+    width: 90%;
+    position: absolute;
+    bottom: 0;
+    /* outline: solid 1px black; */
+}
+
+.total {
+    width: 338px;
+    height: 40px;
+    margin-left: 10px;
+    padding: 0.5em;
+    background-color: #5d2a42;
+    text-align: center;
+    color: #fff9ec;
+    border-radius: 5.50px;
+    outline: solid 1px black;
+}
+
+.total > input {
+    background-color: #5d2a42;
+    font-weight: 700;
+    font-size: large;
+    color: #fff9ec;
+    text-align: center;
+    height: 100%;
+    /* outline: solid 1px black; */
+}
+
+
+
+
+
+
