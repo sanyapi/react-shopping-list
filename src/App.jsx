@@ -3,33 +3,56 @@ import "./styles.css"
 
 export default function App() {
 
+  // declaring states
+  // first value is the state variable
+  // second is a function to update that state variable
   const [newItem, setNewItem] = useState('');
   const [items, setItems] = useState([]);
   const [totalValue, setTotalValue] = useState(0);
 
+  // function to be called when the user submits the form
   function handleSubmit(e)  {
-    e.preventDefault();
+    e.preventDefault();   // prevents the default form submission
+    
+    // adds a new object to the items array using setItems
     setItems([...items, { name: newItem, price: '', quantity: '' }]);
+    
+    // resets the value of newItem to an empty string using setNewItem
     setNewItem('');
   }
 
+ // function to be called whenever an item is changed/modified
   function handleItemChange(e, index, field) {
+
+    // creates a copy of the items array to store the updated items
     const updatedItems = [...items];
+
+    // stores the changed item name, price, and qty into the updatedItems array
+    // specifically storing  in the index and field values
+    // done by using e.target, checking for the value in the value={item.property}
     updatedItems[index][field] = e.target.value;
+
+    // sets the value of items[] to the value of updatedItems
     setItems(updatedItems);
   }
 
   // handles the increasing and decreasing of the quantity counter
   function handleQuantityChange(index, newQuantity) {
-    newQuantity = Math.max(newQuantity, 0); // ensure quantity is at least 0
+    newQuantity = Math.max(newQuantity, 0); // ensures quantity is at least 0
+
+    // creates a copy of the items array to store the updated items
     const updatedItems = [...items];
-    updatedItems[index].quantity = newQuantity; // update the quantity of the item
+
+    updatedItems[index].quantity = newQuantity; // updates the quantity of the item
+
     setItems(updatedItems);
   }
 
+  // computes the total for each time an item quantity is set
   useEffect(() => {
     let total = 0;
     items.forEach(item => {
+      // checks if price and quantity are set
       if (item.price && item.quantity) {
         total += parseFloat(item.price) * parseInt(item.quantity);
       }
