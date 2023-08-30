@@ -13,10 +13,10 @@ export default function App() {
   // function to be called when the user submits the form
   function handleSubmit(e)  {
     e.preventDefault();   // prevents the default form submission
-    
+
     // adds a new object to the items array using setItems
     setItems([...items, { name: newItem, price: '', quantity: '' }]);
-    
+
     // resets the value of newItem to an empty string using setNewItem
     setNewItem('');
   }
